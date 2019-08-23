@@ -1,5 +1,10 @@
 .App {
-  text-align: center;
+  text-align: left;
+  padding: 20px;
+}
+
+.Header {
+  padding: 10px;
 }
 
 .App-logo {
@@ -30,4 +35,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.btn-flat {
+  background-color: purple;
+  color: white;
+}
+
+.btn-xxl {
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
 }
