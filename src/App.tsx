@@ -4,7 +4,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Counter from './components/Counter';
 import Home from './components/Home';
-import GroceryList from './components/GroceryList';
+import Groceries from './components/Groceries';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <div className="App">
           <Route exact path="/" component={Home} />
           <Route path="/counter" component={Counter} />
-          <Route path="/grocery" component={GroceryList} />
+          <Route path="/grocery" component={Groceries} />
         </div>
       </div>
     </Router >

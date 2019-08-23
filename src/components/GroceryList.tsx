@@ -1,13 +1,28 @@
 import React from 'react';
+import { getGroceryList } from '../model/GroceryModel';
 
-const list = ['Milk', 'Cereal', 'OJ'];
+const list = [
+    { name: 'Milk', price: 1.00 },
+    { name: 'OJ', price: 2.00 },
+    { name: 'Cereal', price: 3.00 },
 
-const GroceryList = () => (
-    <ul>
-        {list.map(function (item) {
-            return <li key={item}>{item}</li>;
-        })}
-    </ul>
-);
+];
+
+type MyProps = {
+    list: any;
+}
+
+function GroceryList(props: MyProps) {
+    const list: any = props.list();
+
+    console.log('list=' + list);
+    return (
+        <ul>
+            {list.map(function (item: any) {
+                return <li key={item.name}>{item.name} - ${item.price}</li>;
+            })}
+        </ul>
+    );
+}
 
 export default GroceryList;
